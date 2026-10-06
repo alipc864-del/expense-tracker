@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <header class="header">
+            <div>
+                <h1>Expense Tracker</h1>
+                <p>Manage your money easily</p>
+            </div>
+        </header>
+
+        <section class="balance-card">
+            <p>Current Balance</p>
+            <h2 id="balance">$0.00</h2>
+        </section>
+
+        <section class="summary">
+            <div class="summary-box income">
+                <span>Income</span>
+                <strong id="income">$0.00</strong>
+            </div>
+
+            <div class="summary-box expense">
+                <span>Expenses</span>
+                <strong id="expenses">$0.00</strong>
+            </div>
+        </section>
+
+        <section class="transaction-form">
+            <h2>Add Transaction</h2>
+
+            <input
+                type="text"
+                id="description"
+                placeholder="Transaction description..."
+            >
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Amount..."
+            >
+
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <button id="addBtn">Add Transaction</button>
+        </section>
+
+        <section class="transactions">
+            <div class="section-title">
+                <h2>Transactions</h2>
+                <span id="transactionCount">0</span>
+            </div>
+
+            <div id="transactionList">
+                <p class="empty-message">No transactions yet.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
